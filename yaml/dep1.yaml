@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myapp1
+  name: myappdeployment1
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: myapp1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: myapp1
+    spec:
+      containers:
+      - image: hellonode-reply:v1
+        imagePullPolicy: Never
+        name: myapp1
+        ports:
+        - containerPort: 8002
