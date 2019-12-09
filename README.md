@@ -2,14 +2,17 @@
 
 Esempio di Kuberneetes (*Minikube*), con due applicativi che comunicano tra di loro in ottica di Microservizi. Al momento non è Kuberneetes puro.
 
-1. **Entro nel coontesto di minikube:** eval $(minikube docker-env)
-2. **Effettuo la build dei vari container che mi servono:** docker build -t hellonode:v1 .
-3. **Avvio il tunnel:** minikube tunnel
-4. **Avvio la dashboard:** minikube dashboard
+1. **Avvio Minikube:** *minikube start* 
+2. **Entro nel coontesto di minikube:** *eval $(minikube docker-env)*
+3. **Effettuo la build dei vari container che mi servono:** *docker build -t hellonode:v1 .*
+4. **Avvio il tunnel:** *minikube tunnel*
+5. **Avvio la dashboard:** *minikube dashboard*
 
 # Da fare
 
-Sistemare il loaad balancer, provare su AWS ecc.
+1. Sistemare il discorso delle porte con tipo *LoadBalancer*, visto che in questo modo è solamente accesso locale
+2. Provare a fare il Deploy su AWS
+3. Capire un po come funziona Docker e Kuberneetes
 
 # Link utili
 
