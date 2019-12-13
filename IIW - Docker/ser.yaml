@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: exampleservice
+spec:
+  selector:
+    app: myapp
+  ports:
+  - targetPort: 12345
+    # Port accessible inside cluster
+    port: 30005
+  type: LoadBalancer

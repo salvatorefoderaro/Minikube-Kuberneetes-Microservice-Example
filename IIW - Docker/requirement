@@ -1,0 +1,15 @@
+#!/bin/bash
+
+wget ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick.tar.gz
+tar -xzvf ImageMagick.tar.gz
+rm ImageMagick.tar.gz
+cd ImageMagick*
+./configure
+make
+make install
+cd ..
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
+ldconfig /usr/local/lib
+make server
+./server 12345

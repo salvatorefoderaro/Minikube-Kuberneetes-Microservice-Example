@@ -1,0 +1,12 @@
+#!/bin/bash
+
+wget ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick.tar.gz
+sudo tar -xzvf ImageMagick.tar.gz
+sudo rm ImageMagick.tar.gz
+cd ImageMagick*
+sudo ./configure
+sudo make
+sudo make install
+sudo apt install -y python
+sudo apt install -y python-pip
+sudo pip install xlsxwriter
